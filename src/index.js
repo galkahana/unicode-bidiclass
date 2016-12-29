@@ -23,6 +23,8 @@ const s = require('unicode-9.0.0/Bidi_Class/Segment_Separator/regex');
 const ws = require('unicode-9.0.0/Bidi_Class/White_Space/regex');
 // end regex imports
 
+const punycode = require('punycode');
+
 // Use an LRU cache with 2^16 = 65536 items
 // to store the lookups of char -> bidi_class
 const LRUMap = require('lru_map').LRUMap;
@@ -59,8 +61,10 @@ function lookup(codepoint) {
   const cacheHit = cache.get(codepoint);
   if (cacheHit !== undefined) { return cacheHit }
 
+  // cache miss, perform several regex matches ...
+  const encoding = punycode.ucs2.encode([codepoint]);
   for (name in regexes) {
-    if (regexes[name].test(codepoint) === true) {
+    if (regexes[name].test(encoding) === true) {
       cache.set(codepoint, name);
       return name;
     }
