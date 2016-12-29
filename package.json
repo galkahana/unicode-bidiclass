@@ -2,7 +2,7 @@
   "name": "unicode-bidiclass",
   "version": "1.0.0",
   "description": "Find the Unicode bidirectional class of any codepoint",
-  "main": "src/index.js",
+  "main": "src/dist/bidiType.js",
   "scripts": {
     "test": "npm run unit",
     "unit": "mocha --compilers js:babel-register -r test/spec.helper.js 'test/**/*.spec.js'",
