@@ -1,16 +1,16 @@
 {
-  "name": "unicode-biditype",
+  "name": "unicode-bidiclass",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Find the Unicode bidirectional class of any codepoint",
+  "main": "src/index.js",
   "scripts": {
     "test": "npm run unit",
     "unit": "mocha --compilers js:babel-register -r test/spec.helper.js 'test/**/*.spec.js'",
     "dist": "browserify src/index.js -t babelify --standalone Foo -o dist/bidiType.js",
     "postdist": "uglifyjs dist/bidiType.js -o dist/bidiType.min.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "James Lawson <jameslawson@users.noreply.github.com>",
+  "license": "MIT",
   "babel": {
     "presets": [
       "es2015"
