@@ -4,15 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "npm run unit",
+    "unit": "mocha --compilers js:babel-register -r test/spec.helper.js 'test/**/*.spec.js'",
     "dist": "browserify src/index.js -t babelify --standalone Foo -o dist/bidiType.js",
     "postdist": "uglifyjs dist/bidiType.js -o dist/bidiType.min.js"
   },
   "author": "",
   "license": "ISC",
   "babel": {
-      "presets": [
-          "es2015"
-      ]
+    "presets": [
+      "es2015"
+    ]
   },
   "devDependencies": {
     "babel": "^6.5.2",
@@ -24,10 +26,13 @@
     "babel-preset-es2015": "^6.9.0",
     "babel-register": "^6.9.0",
     "babelify": "^7.2.0",
-    "browserify": "^13.0.0"
+    "browserify": "^13.0.0",
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
   },
   "dependencies": {
     "lodash.forown": "^4.4.0",
+    "lru_map": "^0.3.2",
     "regenerate": "^1.3.2",
     "unicode-9.0.0": "^0.7.0"
   }
