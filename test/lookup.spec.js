@@ -18,6 +18,10 @@ describe('Looking up Unicode Bidi_Class for codepoint', () => {
     expect(lookup(0x060C)).to.equal('CS');
   });
 
+  it('should return "EN" for "U+0031 DIGIT ONE"', () => {
+    expect(lookup(0x0031)).to.equal('EN');
+  });
+
   it('should return "ES" for "U+207A SUPERSCRIPT PLUS SIGN"', () => {
     expect(lookup(0x207A)).to.equal('ES');
   });

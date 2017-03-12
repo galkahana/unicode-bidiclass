@@ -3,6 +3,7 @@ const al = require('unicode-9.0.0/Bidi_Class/Arabic_Letter/regex');
 const an = require('unicode-9.0.0/Bidi_Class/Arabic_Number/regex');
 const bn = require('unicode-9.0.0/Bidi_Class/Boundary_Neutral/regex');
 const cs = require('unicode-9.0.0/Bidi_Class/Common_Separator/regex');
+const en = require('unicode-9.0.0/Bidi_Class/European_Number/regex');
 const es = require('unicode-9.0.0/Bidi_Class/European_Separator/regex');
 const et = require('unicode-9.0.0/Bidi_Class/European_Terminator/regex');
 const fsi = require('unicode-9.0.0/Bidi_Class/First_Strong_Isolate/regex');
@@ -36,6 +37,7 @@ const regexes = {
   'AN': an,
   'BN': bn,
   'CS': cs,
+  'EN': en,
   'ES': es,
   'ET': et,
   'FSI': fsi,
