@@ -1,6 +1,6 @@
 {
   "name": "unicode-bidiclass",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Find the Unicode bidirectional class of any codepoint",
   "main": "dist/bidiType.js",
   "scripts": {
@@ -32,9 +32,9 @@
     "uglify-js": "^3.0.21"
   },
   "dependencies": {
+    "@unicode/unicode-9.0.0": "^1.3.0",
     "lodash.forown": "^4.4.0",
     "lru_map": "^0.3.2",
-    "regenerate": "^1.3.2",
-    "unicode-9.0.0": "^0.7.0"
+    "regenerate": "^1.3.2"
   }
 }
