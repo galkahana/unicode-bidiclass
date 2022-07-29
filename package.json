@@ -1,5 +1,5 @@
 {
-  "name": "unicode-bidiclass",
+  "name": "@galkahana/unicode-bidiclass",
   "version": "1.0.2",
   "description": "Find the Unicode bidirectional class of any codepoint",
   "main": "dist/bidiType.js",
